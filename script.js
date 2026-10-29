@@ -1,5 +1,6 @@
 const container = document.querySelector("#container");
 const gridChangeBtn = document.querySelector("#changeGridBtn");
+const refreshPageBtn = document.querySelector("#refreshPageBtn");
 
 // Randomize colors
 function randomColor() {
@@ -21,17 +22,27 @@ function makeGrid(rows, cols) {
 
     // Creating the grid
     for (let c = 0; c < (rows * cols); c++) {
+
+        // Creating the div of each item
         cell = document.createElement("div");
         cell.innerText = (c + 1);
         container.appendChild(cell).className = "grid-item";
+
+        // Choosing random color
+        let color = randomColor();
+
+        // Giving random color when mouse moves around grid
+        cell.addEventListener("mouseenter", (e) => {
+            e.target.style.backgroundColor = color;
+        })
     };
 };
 
 // Changing the grid from 16x16 to something else
 gridChangeBtn.addEventListener("click", function onClick() {
 
-    // Asking for a number between 1 and 40
-    let gridSize = Number(prompt("Choose the size of your custom grid between 1 and 40"));
+    // Asking for a number between 1 and 100
+    let gridSize = Number(prompt("Choose the size of your custom grid between 1 and 100"));
 
     // If the choice isn't a number
     if (isNaN(gridSize) === true) {
@@ -39,8 +50,8 @@ gridChangeBtn.addEventListener("click", function onClick() {
         return onClick();
     }
 
-    // If choice is less than 40
-    if (gridSize > 40) {
+    // If choice is less than 100
+    if (gridSize > 100) {
         window.alert("Please pick a number lower than 40");
         return onClick();
     }
@@ -53,3 +64,8 @@ gridChangeBtn.addEventListener("click", function onClick() {
 
     return makeGrid(gridSize, gridSize);
 });
+
+// Refreshing the page
+refreshPageBtn.addEventListener("click", (e) => {
+    location.reload();
+})

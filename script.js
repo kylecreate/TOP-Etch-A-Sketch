@@ -67,6 +67,6 @@ gridChangeBtn.addEventListener("click", function onClick() {
 });
 
 // Refreshing the page
-refreshPageBtn.addEventListener("click", (e) => {
+refreshPageBtn.addEventListener("click", function() {
     location.reload();
 })

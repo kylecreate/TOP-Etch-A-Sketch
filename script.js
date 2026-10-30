@@ -25,7 +25,6 @@ function makeGrid(rows, cols) {
 
         // Creating the div of each item
         cell = document.createElement("div");
-        cell.innerText = (c + 1);
         container.appendChild(cell).className = "grid-item";
 
         // Choosing random color
@@ -37,6 +36,8 @@ function makeGrid(rows, cols) {
         })
     };
 };
+
+makeGrid(16, 16);
 
 // Changing the grid from 16x16 to something else
 gridChangeBtn.addEventListener("click", function onClick() {
@@ -52,7 +53,7 @@ gridChangeBtn.addEventListener("click", function onClick() {
 
     // If choice is less than 100
     if (gridSize > 100) {
-        window.alert("Please pick a number lower than 40");
+        window.alert("Please pick a number lower than 100");
         return onClick();
     }
 

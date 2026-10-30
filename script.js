@@ -1,4 +1,5 @@
-const container = document.querySelector("#container");
+"use strict";
+
 const gridChangeBtn = document.querySelector("#changeGridBtn");
 const refreshPageBtn = document.querySelector("#refreshPageBtn");
 

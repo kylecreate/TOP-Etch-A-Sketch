@@ -4,3 +4,4 @@ Etch-A-Sketch Project from TheOdinProject
 ## Resources Used
 * [How to create a 16x16 grid in JavaScript](https://stackoverflow.com/questions/57550082/creating-a-16x16-grid-using-javascript)
 * [How to refresh a page using JavaScript](https://stackoverflow.com/questions/5404839/how-do-i-refresh-a-page-using-javascript)
+* [Using "use strict" to fix a stack of divs from being created when clicking cancel/escape button](https://www.reddit.com/r/javascript/comments/6hteqj/cancel_function_after_button_is_pressed/)
